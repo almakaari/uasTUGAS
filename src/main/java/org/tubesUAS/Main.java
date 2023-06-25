@@ -7,7 +7,7 @@ public class Main {
         if (node == null){
             stadt.tambahKota(name);
             System.out.printf("|   %-13s| Ditambah  |\n",name);
-            System.out.println("------'.------------------------");
+            System.out.println("---------------------------------");
         }else {
             System.out.println("|   " + name + "   |   Sudah Ada |");
             System.out.println("---------------------------------");
@@ -93,10 +93,13 @@ public class Main {
                         System.exit(0);
                         break;
                     case 1:
-                        System.out.println("TAMBAH ANTRIAN");
-                        System.out.println("1) BUS");
-                        System.out.println("2) KERETA");
-                        System.out.println("3) PESAWAT");
+                        System.out.println("");
+                        System.out.println("━━━━━━━━━━");
+                        System.out.println(" Tambah Antrian ");
+                        System.out.println("━━━━━━━━━━");
+                        System.out.println("1) Bus");
+                        System.out.println("2) Kereta");
+                        System.out.println("3) Pesawat");
                         System.out.print("Pilih jenis antrian: ");
                         layanan = Integer.parseInt(input.nextLine());
                         String nama_pnp;
@@ -122,22 +125,34 @@ public class Main {
                         if(bus.isEmpty() && kereta.isEmpty() && pesawat.isEmpty()){
                             System.out.println("Antrian Kosong");
                         }else{
-                            System.out.println("Antrian Bus");
+                            System.out.println("\n============= ANTRIAN BUS =============");
+                            System.out.println("---------------------------------------");
+                            System.out.printf("|  %-3s|               %-15s | \n","NO","Nama");
+                            System.out.println("---------------------------------------");
                             bus.print();
-                            System.out.println("===================");
-                            System.out.println("Antrian Kereta");
+                            System.out.println("---------------------------------------");
+                            System.out.println("\n============ ANTRIAN KERETA ===========");
+                            System.out.println("---------------------------------------");
+                            System.out.printf("|  %-3s|               %-15s | \n","NO","Nama");
+                            System.out.println("---------------------------------------");
                             kereta.print();
-                            System.out.println("===================");
-                            System.out.println("Antrian Pesawat");
+                            System.out.println("---------------------------------------");
+                            System.out.println("\n=========== ANTRIAN PESAWAT ===========");
+                            System.out.println("---------------------------------------");
+                            System.out.printf("|  %-3s|               %-15s | \n","NO","Nama");
+                            System.out.println("---------------------------------------");
                             pesawat.print();
-                            System.out.println("===================");
+                            System.out.println("---------------------------------------");
                         }
                         break;
                     case 3:
-                        System.out.println("KELOLA KOTA");
-                        System.out.println("1) TAMBAH KOTA");
-                        System.out.println("2) HAPUS KOTA");
-                        System.out.println("3) LIHAT KOTA");
+                        System.out.println("");
+                        System.out.println("━━━━━━━━━━");
+                        System.out.println(" Kelola Kota ");
+                        System.out.println("━━━━━━━━━━");
+                        System.out.println("1) Tambah Kota");
+                        System.out.println("2) Hapus Kota");
+                        System.out.println("3) Lihat Kota");
                         System.out.print("Pilih tindakan: ");
                         int kelola = Integer.parseInt(input.nextLine());
                         String asal;
@@ -162,10 +177,13 @@ public class Main {
                         searchStadt(stadt, cari);
                         break;
                     case 5:
-                        System.out.println("KELOLA JALUR");
-                        System.out.println("1) TAMBAH JALUR");
-                        System.out.println("2) HAPUS JALUR");
-                        System.out.println("3) LIHAT JALUR");
+                        System.out.println("");
+                        System.out.println("━━━━━━━━━━");
+                        System.out.println(" Kelola Jalur ");
+                        System.out.println("━━━━━━━━━━");
+                        System.out.println("1) Tambah Jalur");
+                        System.out.println("2) Hapus Jalur");
+                        System.out.println("3) Lihat Jalur");
                         System.out.print("Pilih tindakan: ");
                         int lajur = Integer.parseInt(input.nextLine());
                         String awal, tujuan;
