@@ -39,10 +39,8 @@ public class Antrian {
         }else{
             while(elemenSementara != null){
                 count++;
-                System.out.println("++++++++++++++++++++++");
-                System.out.println("Nama: "+(elemenSementara.nama));
-                System.out.println("No.antrian: "+count);
-                System.out.println("+++++++++++++++++++++++");
+                count++;
+                System.out.printf("|  %-3s|               %-15s | \n", count, elemenSementara.nama );
                 elemenSementara = elemenSementara.next;
             }
         }
